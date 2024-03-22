@@ -48,15 +48,15 @@ jobs:
       - name: Login to Azure
         uses: azure/login@v1
         with:
-          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_2ABE5D1A4E6E41E19F0BDAF3FFEBC384 }}
-          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_F3C32697826A421E98F051974DA150A7 }}
-          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_9D8BE60AF8384B2E8BEB4DE0B55CBC0A }}
+          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_14C9EF595CF54BA3AFF0713E310CD7B1 }}
+          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_508AFD2A76774C7AAE00D088189E290C }}
+          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_95EDD9163F7D42348AF66240F01967E9 }}
 
       - name: Deploy to Azure Web App
         id: deploy-to-webapp
         uses: azure/webapps-deploy@v2
         with:
-          app-name: 'test'
+          app-name: 'springboot-azure-test'
           slot-name: 'Production'
           package: '*.jar'
           
